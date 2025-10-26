@@ -246,13 +246,21 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // -------------------- Kết nối PostgreSQL --------------------
+const { Pool } = require('pg');
+
 const pool = new Pool({
-  user: 'truong',
-  host: 'localhost',
-  database: 'marketplace',
-  password: '123456',
+  user: 'marketplace_db_fphj_user',
+  host: 'dpg-d3uumrbe5dus739vgasg-a.oregon-postgres.render.com',
+  database: 'marketplace_db_fphj',
+  password: 'h0CUAyDup71qOeiQBNt5H8lUyY1ZqkEr',
   port: 5432,
 });
+
+
+
+
+
+
 
 pool.connect()
   .then(() => console.log('✅ PostgreSQL connected'))
