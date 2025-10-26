@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giỏ hàng</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f7fc;
+      margin: 0;
+    }
+    header {
+      background: #007bff;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+    }
+    .item:last-child {
+      border: none;
+    }
+    .item h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #333;
+    }
+    .price {
+      color: #007bff;
+      font-weight: bold;
+    }
+    .total {
+      text-align: right;
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .checkout {
+      text-align: right;
+      margin-top: 10px;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .back {
+      margin-top: 15px;
+      text-align: center;
+    }
+    .back a {
+      text-decoration: none;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <header>🛒 Giỏ hàng</header>
+  <div class="container">
+    <div class="item">
+      <h3>Áo phông nam</h3>
+      <p class="price">150.000 VNĐ</p>
+    </div>
+    <div class="item">
+      <h3>Giày thể thao</h3>
+      <p class="price">450.000 VNĐ</p>
+    </div>
+    <div class="item">
+      <h3>Mũ lưỡi trai</h3>
+      <p class="price">120.000 VNĐ</p>
+    </div>
+
+    <div class="total">Tổng cộng: <span style="color:#007bff;">720.000 VNĐ</span></div>
+    <div class="checkout">
+      <button onclick="thanhToan()">Thanh toán</button>
+    </div>
+
+    <div class="back">
+      <a href="/">← Quay lại trang chủ</a>
+    </div>
+  </div>
+
+  <script>
+    function thanhToan() {
+      alert("🧾 Chức năng thanh toán đang được phát triển!");
+    }
+  </script>
+</body>
+</html>
