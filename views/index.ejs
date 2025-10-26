@@ -150,16 +150,25 @@
 
   </div>
 
-  <main id="productList">
-    <% products.forEach(p => { %>
-      <div class="product">
-        <img src="<%= p.image || 'https://via.placeholder.com/200x200?text=No+Image' %>" alt="<%= p.name %>">
-        <h3><%= p.name %></h3>
-        <p><%= p.description %></p>
-        <strong><%= p.price.toLocaleString() %> ₫</strong>
-      </div>
-    <% }) %>
-  </main>
+
+<main id="productList">
+  <% products.forEach(p => { %>
+    <div class="product">
+      <img src="<%= p.anh || 'https://via.placeholder.com/200x200?text=No+Image' %>" alt="<%= p.ten %>">
+      <h3><%= p.ten %></h3>
+      <p><%= p.mota %></p>
+      <strong><%= p.gia.toLocaleString() %> ₫</strong>
+    </div>
+  <% }) %>
+</main>
+
+
+
+
+
+
+
+
 
   <footer>© 2025 My Marketplace</footer>
 

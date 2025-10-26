@@ -243,13 +243,21 @@ pool.query('SELECT * FROM public.users')
 // Trang chủ
 app.get('/', async (req, res) => {
   try {
-    const resultProducts = await pool.query('SELECT * FROM public.products');
-    res.render('index', { products: resultProducts.rows });
+    const result = await pool.query('SELECT * FROM public.products');
+    console.log('✅ Products from database:', result.rows); // log dữ liệu
+    res.render('index', { products: result.rows });
   } catch (err) {
-    console.error('❌ Lỗi khi truy xuất sản phẩm:', err);
-    res.send('Lỗi khi truy xuất sản phẩm');
+    console.error('❌ Lỗi khi render index:', err); // log chi tiết
+    res.status(500).send('Lỗi khi truy xuất sản phẩm: ' + err.message);
   }
 });
+
+
+
+
+
+
+
 
 // Nạp tiền
 app.get('/nap-tien', (req, res) => res.render('nap-tien'));
